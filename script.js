@@ -1,4 +1,3 @@
-// Typing animation
 const typingElement = document.getElementById("typing-text");
 const phrases = [
   "AI Developer & Technology Specialist",
@@ -13,7 +12,7 @@ let currentPhrase = [];
 function loop() {
   typingElement.innerHTML = currentPhrase.join("") + '<span class="cursor">|</span>';
 
-  if (!isDeleting && j <= phrases[i].length) {
+  if (!isDeleting && j < phrases[i].length) {
     currentPhrase.push(phrases[i][j]);
     j++;
   }
@@ -23,9 +22,9 @@ function loop() {
     j--;
   }
 
-  if (j === phrases[i].length) {
+  if (j === phrases[i].length && !isDeleting) {
     isDeleting = true;
-    setTimeout(loop, 1200);
+    setTimeout(loop, 1200); // Wait before deleting
     return;
   }
 
