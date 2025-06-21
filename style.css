@@ -315,86 +315,57 @@ h2 {
 }
 
 /* Testimonials Carousel */
-.testimonials-container {
-  max-width: 800px;
-  margin: 80px auto;
-  position: relative;
-  text-align: center;
+let currentIndex = 0;
+const slides = document.querySelectorAll(".testimonial-slide");
+const dots = document.querySelectorAll(".carousel-dots span");
+const leftArrow = document.querySelector(".carousel-nav.left");
+const rightArrow = document.querySelector(".carousel-nav.right");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    dots[i].classList.remove("active");
+  });
+
+  slides[index].classList.add("active");
+  dots[index].classList.add("active");
+  currentIndex = index;
 }
 
-.testimonials-carousel {
-  overflow: hidden;
-  position: relative;
+function nextSlide() {
+  const newIndex = (currentIndex + 1) % slides.length;
+  showSlide(newIndex);
 }
 
-.testimonial-slide {
-  display: none;
-  padding: 30px;
-  background-color: #1a1a1f;
-  border-radius: 16px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  color: #e0e0e0;
-  transition: opacity 0.5s ease;
+function prevSlide() {
+  const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(newIndex);
 }
 
-.testimonial-slide.active {
-  display: block;
+// Autoplay every 6 seconds
+let autoSlide = setInterval(nextSlide, 6000);
+
+function resetAutoSlide() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(nextSlide, 6000);
 }
 
-.testimonial-slide mark {
-  background-color: rgba(168, 85, 247, 0.2);
-  color: #a855f7;
-  font-weight: 600;
-}
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    showSlide(i);
+    resetAutoSlide();
+  });
+});
 
-.testimonial-author {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #a855f7;
-}
+rightArrow.addEventListener("click", () => {
+  nextSlide();
+  resetAutoSlide();
+});
 
-.testimonial-position {
-  font-size: 0.9em;
-  color: #aaa;
-}
+leftArrow.addEventListener("click", () => {
+  prevSlide();
+  resetAutoSlide();
+});
 
-.carousel-dots {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.carousel-dots span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 4px;
-  background-color: #444;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.carousel-dots span.active {
-  background-color: #a855f7;
-}
-
-.carousel-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: #a855f7;
-  background: rgba(255, 255, 255, 0.05);
-  border: none;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.carousel-nav.left {
-  left: -40px;
-}
-
-.carousel-nav.right {
-  right: -40px;
-}
+// Initialize
+showSlide(currentIndex);
