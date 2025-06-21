@@ -51,17 +51,10 @@ nav.navbar {
   color: #a855f7;
 }
 
-/* Mobile-friendly tweak */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-wrap: wrap;
-    padding: 12px 10px;
-  }
-
-  .navbar-container a {
-    font-size: 1em;
-    margin: 8px;
-  }
+main {
+  margin: 0 auto;
+  padding: 100px 40px 40px; /* Top padding accounts for sticky nav */
+  max-width: 1200px;
 }
 
 .profile-img {
@@ -178,21 +171,15 @@ h2 {
 
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
-  .sidebar {
+  .navbar-container {
     flex-wrap: wrap;
-    padding: 10px 10px;
+    padding: 12px 10px;
   }
 
-  .sidebar a {
-    margin: 8px 12px;
+  .navbar-container a {
     font-size: 1em;
+    margin: 8px;
   }
-
- main {
-  margin: 0 auto;
-  padding: 100px 40px 40px; /* Top padding accounts for sticky nav */
-  max-width: 1200px;
-}
 
   .profile-img {
     width: 120px;
