@@ -249,3 +249,10 @@ h2 {
   50% { opacity: 0; }
 }
 
+@media (max-width: 480px) {
+  #projects h2,
+  #contact h2 {
+    font-size: 1.4em !important;
+  }
+}
+
