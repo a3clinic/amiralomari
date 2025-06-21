@@ -78,54 +78,54 @@
       </div>
     </section>
 
-<section id="testimonials" class="fade-in center-content">
+<section class="testimonials-container" id="testimonials">
   <h2>What People Say</h2>
-  <p style="color: #aaa; margin-top: -10px; font-size: 1.1em;">92% of collaborators say Amir improved their daily work in just one week</p>
+  <p>92% of collaborators say Amir improved their daily work in just one week</p>
 
-  <div class="testimonial-wrapper">
-    <button class="arrow prev" onclick="moveSlide(-1)">&#10094;</button>
-
-    <div class="testimonial-slider">
-      <div class="testimonial-card active">
-        <p><mark>Amir is the kind of developer you can count on.</mark> Fast communication, no fluff, and solid results. He turned our broken prototype into a working product in days.</p>
-        <hr>
-        <div class="author"><strong>Lina A.</strong><br><em>Startup Founder, Bloomify</em></div>
-      </div>
-
-      <div class="testimonial-card">
-        <p><mark>We collaborated on an internal AI dashboard.</mark> Amir just got it. No need for endless back-and-forths — he delivered clean code and great ideas.</p>
-        <hr>
-        <div class="author"><strong>Mustafa H.</strong><br><em>Senior Software Engineer, N/A</em></div>
-      </div>
-
-      <div class="testimonial-card">
-        <p><mark>Amir helped us automate repetitive tasks.</mark> The time savings have been amazing. Super smart, very professional.</p>
-        <hr>
-        <div class="author"><strong>Aisha M.</strong><br><em>Operations Specialist, WebSprint</em></div>
-      </div>
-
-      <div class="testimonial-card">
-        <p><mark>He built a custom chatbot for our site.</mark> Visitors love it, and it saved our support team so much time.</p>
-        <hr>
-        <div class="author"><strong>Salma R.</strong><br><em>Community Manager, CodersBay</em></div>
-      </div>
-
-      <div class="testimonial-card">
-        <p><mark>I had no tech experience, but Amir explained everything clearly.</mark> The website he made for my brand is simple, smart, and beautiful.</p>
-        <hr>
-        <div class="author"><strong>Nour K.</strong><br><em>Freelance Designer, N/A</em></div>
-      </div>
+  <div class="testimonials-carousel">
+    <!-- Slides -->
+    <div class="testimonial-slide active">
+      <p><mark>Amir is the kind of developer you can count on.</mark> Fast communication, no fluff, and solid results. He turned our broken prototype into a working product in days.</p>
+      <div class="testimonial-author">Lina A.</div>
+      <div class="testimonial-position">Startup Founder, Bloomify</div>
     </div>
 
-    <button class="arrow next" onclick="moveSlide(1)">&#10095;</button>
+    <div class="testimonial-slide">
+      <p><mark>We collaborated on an internal AI dashboard.</mark> Amir just got it. No need for endless back-and-forths — he delivered clean code and great ideas.</p>
+      <div class="testimonial-author">Mustafa H.</div>
+      <div class="testimonial-position">Senior Software Engineer, N/A</div>
+    </div>
+
+    <div class="testimonial-slide">
+      <p><mark>Amir helped us automate repetitive tasks.</mark> The time savings have been amazing. Super smart, very professional.</p>
+      <div class="testimonial-author">Aisha M.</div>
+      <div class="testimonial-position">Operations Specialist, WebSprint</div>
+    </div>
+
+    <div class="testimonial-slide">
+      <p><mark>He built a custom chatbot for our site.</mark> Visitors love it, and it saved our support team so much time.</p>
+      <div class="testimonial-author">Salma R.</div>
+      <div class="testimonial-position">Community Manager, CodersBay</div>
+    </div>
+
+    <div class="testimonial-slide">
+      <p><mark>I had no tech experience, but Amir explained everything clearly.</mark> The website he made for my brand is simple, smart, and beautiful.</p>
+      <div class="testimonial-author">Nour K.</div>
+      <div class="testimonial-position">Freelance Designer, N/A</div>
+    </div>
+
+    <!-- Arrows -->
+    <button class="carousel-nav left">❮</button>
+    <button class="carousel-nav right">❯</button>
   </div>
 
-  <div class="dots">
-    <span class="dot active" onclick="goToSlide(0)"></span>
-    <span class="dot" onclick="goToSlide(1)"></span>
-    <span class="dot" onclick="goToSlide(2)"></span>
-    <span class="dot" onclick="goToSlide(3)"></span>
-    <span class="dot" onclick="goToSlide(4)"></span>
+  <!-- Dots -->
+  <div class="carousel-dots">
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </section>
 
