@@ -17,13 +17,13 @@ body {
 
 /* Modern top navbar */
 .sidebar {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 60px;
   background: rgba(21, 21, 26, 0.85);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,9 +171,11 @@ h2 {
     font-size: 1em;
   }
 
-  main {
-    padding: 90px 20px 20px;
-  }
+ main {
+  margin: 0 auto;
+  padding: 100px 40px 40px; /* Top padding accounts for sticky nav */
+  max-width: 1200px;
+}
 
   .profile-img {
     width: 120px;
