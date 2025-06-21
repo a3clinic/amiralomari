@@ -53,7 +53,7 @@ nav.navbar {
 
 main {
   margin: 0 auto;
-  padding: 100px 40px 40px; /* Top padding accounts for sticky nav */
+  padding: 140px 40px 40px; /* Increased top padding to avoid overlap on desktop */
   max-width: 1200px;
 }
 
@@ -179,6 +179,10 @@ h2 {
   .navbar-container a {
     font-size: 1em;
     margin: 8px;
+  }
+
+  main {
+    padding: 120px 20px 20px; /* Slightly reduced padding for smaller screens */
   }
 
   .profile-img {
