@@ -38,21 +38,3 @@ function type() {
 }
 
 type();
-
-const shareBtn = document.getElementById('shareBtn');
-
-shareBtn.addEventListener('click', async () => {
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: document.title,
-        url: window.location.href
-      });
-    } catch (err) {
-      alert('Sharing canceled or failed.');
-    }
-  } else {
-    navigator.clipboard.writeText(window.location.href);
-    alert("Link copied to clipboard!");
-  }
-});
