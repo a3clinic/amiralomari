@@ -238,3 +238,15 @@ h2 {
     height: 30px;
   }
 }
+
+#typing-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+  margin-left: 4px;
+  color: #a855f7;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
