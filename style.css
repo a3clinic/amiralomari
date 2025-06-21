@@ -33,17 +33,19 @@ nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .navbar-container a {
   color: #e0e0e0;
   text-decoration: none;
-  margin: 0 16px;
   padding: 8px 14px;
   border-radius: 10px;
   font-weight: 600;
   font-size: 1.1em;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .navbar-container a:hover {
@@ -175,13 +177,14 @@ h2 {
 
 @media (max-width: 768px) {
   .navbar-container {
-    flex-wrap: wrap;
     padding: 12px 10px;
   }
 
   .navbar-container a {
     font-size: 1em;
-    margin: 8px;
+    padding: 8px 10px;
+    flex: 1 1 auto;
+    text-align: center;
   }
 
   main {
@@ -238,6 +241,10 @@ h2 {
 
   h1 {
     font-size: 1.5em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
   }
 
   h2 {
