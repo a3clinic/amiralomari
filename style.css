@@ -33,17 +33,20 @@ nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .navbar-container a {
   color: #e0e0e0;
   text-decoration: none;
-  margin: 0 16px;
+  margin: 0 12px;
   padding: 8px 14px;
   border-radius: 10px;
   font-weight: 600;
   font-size: 1.1em;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .navbar-container a:hover {
@@ -53,7 +56,7 @@ nav.navbar {
 
 main {
   margin: 0 auto;
-  padding: 140px 40px 40px; /* Increased top padding to avoid overlap on desktop */
+  padding: 140px 40px 40px;
   max-width: 1200px;
 }
 
@@ -68,6 +71,8 @@ main {
 h1 {
   font-size: 2.5em;
   margin: 0;
+  text-align: center;
+  white-space: normal;
 }
 
 h2 {
@@ -169,10 +174,8 @@ h2 {
   box-shadow: 0 8px 30px rgba(168, 85, 247, 0.5);
 }
 
-/* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
   .navbar-container {
-    flex-wrap: wrap;
     padding: 12px 10px;
   }
 
@@ -182,16 +185,18 @@ h2 {
   }
 
   main {
-    padding: 120px 20px 20px; /* Slightly reduced padding for smaller screens */
+    padding: 120px 20px 20px;
+  }
+
+  h1 {
+    font-size: 1.9em;
+    text-align: center;
+    white-space: normal;
   }
 
   .profile-img {
     width: 120px;
     height: 120px;
-  }
-
-  h1 {
-    font-size: 2em;
   }
 
   h2 {
@@ -230,7 +235,7 @@ h2 {
   }
 
   h1 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   h2 {
