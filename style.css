@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 80px; /* Ensures space from top during scroll */
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
