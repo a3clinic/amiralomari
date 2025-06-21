@@ -3,7 +3,7 @@ html {
 }
 
 section {
-  scroll-margin-top: 80px; /* Ensures space from top during scroll */
+  scroll-margin-top: 80px;
 }
 
 body {
@@ -15,23 +15,25 @@ body {
   font-size: 18px;
 }
 
+/* Modern top navbar */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 180px;
-  height: 100%;
+  right: 0;
+  height: 60px;
   background: #15151a;
-  padding-top: 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  z-index: 10000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .sidebar a {
   color: #ccc;
   text-decoration: none;
-  margin: 20px 0;
+  margin: 0 20px;
   transition: color 0.3s;
   font-size: 1.1em;
 }
@@ -41,8 +43,8 @@ body {
 }
 
 main {
-  margin-left: 200px;
-  padding: 40px;
+  margin: 0;
+  padding: 100px 40px 40px;
 }
 
 .profile-img {
@@ -82,7 +84,7 @@ h2 {
 }
 
 .cert-logo {
-  height: 40px;
+  height: 60px;
 }
 
 .socials {
@@ -160,27 +162,17 @@ h2 {
 /* RESPONSIVE MEDIA QUERIES */
 @media (max-width: 768px) {
   .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 0;
-    background: #15151a;
-    z-index: 9999;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    flex-wrap: wrap;
+    padding: 10px 10px;
   }
 
   .sidebar a {
-    margin: 10px;
+    margin: 8px 12px;
     font-size: 1em;
   }
 
   main {
-    margin-left: 0;
-    padding: 80px 20px 20px; /* top padding to avoid overlap */
+    padding: 90px 20px 20px;
   }
 
   .profile-img {
@@ -240,7 +232,12 @@ h2 {
   }
 
   .cert-logo {
-    height: 30px;
+    height: 50px;
+  }
+
+  #projects h2,
+  #contact h2 {
+    font-size: 1.4em !important;
   }
 }
 
@@ -252,11 +249,4 @@ h2 {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
-}
-
-@media (max-width: 480px) {
-  #projects h2,
-  #contact h2 {
-    font-size: 1.4em !important;
-  }
 }
