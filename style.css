@@ -276,18 +276,32 @@ h2 {
 }
 
 .share-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background-color: #a855f7;
-  color: white;
-  padding: 10px 20px;
-  font-size: 1em;
+  color: #fff;
   border: none;
+  padding: 12px 18px;
+  font-size: 16px;
   border-radius: 12px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 1001;
 }
 
 .share-button:hover {
   background-color: #9333ea;
+  transform: scale(1.05);
 }
+
+@media (max-width: 480px) {
+  .share-button {
+    bottom: 15px;
+    right: 15px;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
