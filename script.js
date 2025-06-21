@@ -7,25 +7,20 @@ const phrases = [
 let i = 0;
 let j = 0;
 let isDeleting = false;
-let currentPhrase = [];
+let isEnd = false;
 
 function loop() {
-  typingElement.innerHTML = currentPhrase.join("") + '<span class="cursor">|</span>';
+  typingElement.innerHTML = phrases[i].substring(0, j) + '<span class="cursor">|</span>';
 
   if (!isDeleting && j < phrases[i].length) {
-    currentPhrase.push(phrases[i][j]);
     j++;
-  }
-
-  if (isDeleting && j > 0) {
-    currentPhrase.pop();
+  } else if (isDeleting && j > 0) {
     j--;
   }
 
-  if (j === phrases[i].length && !isDeleting) {
+  if (j === phrases[i].length) {
+    isEnd = true;
     isDeleting = true;
-    setTimeout(loop, 1200); // Wait before deleting
-    return;
   }
 
   if (isDeleting && j === 0) {
@@ -33,7 +28,9 @@ function loop() {
     i = (i + 1) % phrases.length;
   }
 
-  setTimeout(loop, isDeleting ? 50 : 100);
+  const typingSpeed = isEnd ? 1200 : isDeleting ? 50 : 100;
+  isEnd = false;
+  setTimeout(loop, typingSpeed);
 }
 
 loop();
