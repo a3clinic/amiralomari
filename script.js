@@ -48,3 +48,58 @@ window.addEventListener("scroll", () => {
 scrollToTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+let currentIndex = 0;
+const slides = document.querySelectorAll(".testimonial-slide");
+const dots = document.querySelectorAll(".carousel-dots span");
+const leftArrow = document.querySelector(".carousel-nav.left");
+const rightArrow = document.querySelector(".carousel-nav.right");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+    dots[i].classList.toggle("active", i === index);
+  });
+  currentIndex = index;
+}
+
+function nextSlide() {
+  let newIndex = (currentIndex + 1) % slides.length;
+  showSlide(newIndex);
+}
+
+function prevSlide() {
+  let newIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(newIndex);
+}
+
+// Auto play
+let autoSlide = setInterval(nextSlide, 6000);
+
+// Dot click
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    showSlide(i);
+    resetInterval();
+  });
+});
+
+// Arrow click
+rightArrow.addEventListener("click", () => {
+  nextSlide();
+  resetInterval();
+});
+
+leftArrow.addEventListener("click", () => {
+  prevSlide();
+  resetInterval();
+});
+
+// Reset autoplay timer
+function resetInterval() {
+  clearInterval(autoSlide);
+  autoSlide = setInterval(nextSlide, 6000);
+}
+
+// Start with the first slide
+showSlide(currentIndex);
