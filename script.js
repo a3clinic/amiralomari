@@ -1,39 +1,40 @@
 const typingElement = document.getElementById("typing-text");
 const phrases = [
-  "AI Developer & Technology Specialistt",
-  "Turning Ideas into Reality with Code & AII"
+  "AI Developer & Technology Specialist",
+  "Turning Ideas into Reality with Code & AI"
 ];
 
-let i = 0;
-let j = 0;
+let phraseIndex = 0;
+let charIndex = 0;
 let isDeleting = false;
-let isEnd = false;
 
-function loop() {
-  const fullText = phrases[i];
-  let displayText = fullText.substring(0, j);
-  
-  typingElement.innerHTML = displayText + '<span class="cursor">|</span>';
+function type() {
+  const currentPhrase = phrases[phraseIndex];
+  const visibleText = currentPhrase.substring(0, charIndex);
 
-  if (!isDeleting && j < fullText.length) {
-    j++;
-  } else if (isDeleting && j > 0) {
-    j--;
+  typingElement.innerHTML = visibleText + '<span class="cursor">|</span>';
+
+  if (!isDeleting) {
+    if (charIndex < currentPhrase.length) {
+      charIndex++;
+      setTimeout(type, 100);
+    } else {
+      // Pause before deleting
+      setTimeout(() => {
+        isDeleting = true;
+        type();
+      }, 1500);
+    }
+  } else {
+    if (charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 50);
+    } else {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      setTimeout(type, 300);
+    }
   }
-
-  if (j === fullText.length) {
-    isEnd = true;
-    isDeleting = true;
-  }
-
-  if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % phrases.length;
-  }
-
-  const speed = isEnd ? 1200 : isDeleting ? 50 : 100;
-  isEnd = false;
-  setTimeout(loop, speed);
 }
 
-loop();
+type();
