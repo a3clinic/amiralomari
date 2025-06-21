@@ -10,15 +10,18 @@ let isDeleting = false;
 let isEnd = false;
 
 function loop() {
-  typingElement.innerHTML = phrases[i].substring(0, j) + '<span class="cursor">|</span>';
+  const fullText = phrases[i];
+  let displayText = fullText.substring(0, j);
+  
+  typingElement.innerHTML = displayText + '<span class="cursor">|</span>';
 
-  if (!isDeleting && j < phrases[i].length) {
+  if (!isDeleting && j < fullText.length) {
     j++;
   } else if (isDeleting && j > 0) {
     j--;
   }
 
-  if (j === phrases[i].length) {
+  if (j === fullText.length) {
     isEnd = true;
     isDeleting = true;
   }
@@ -28,9 +31,9 @@ function loop() {
     i = (i + 1) % phrases.length;
   }
 
-  const typingSpeed = isEnd ? 1200 : isDeleting ? 50 : 100;
+  const speed = isEnd ? 1200 : isDeleting ? 50 : 100;
   isEnd = false;
-  setTimeout(loop, typingSpeed);
+  setTimeout(loop, speed);
 }
 
 loop();
