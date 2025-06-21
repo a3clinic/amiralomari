@@ -16,35 +16,52 @@ body {
 }
 
 /* Modern top navbar */
-.sidebar {
-  position: fixed;
+nav.navbar {
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: rgba(21, 21, 26, 0.85);
-  backdrop-filter: blur(10px);
+  width: 100%;
+  background: rgba(21, 21, 26, 0.9);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-.sidebar a {
+.navbar-container a {
   color: #e0e0e0;
   text-decoration: none;
-  margin: 0 18px;
-  padding: 8px 12px;
-  border-radius: 8px;
+  margin: 0 16px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
   transition: all 0.3s ease;
-  font-weight: 500;
-  font-size: 1.05em;
 }
 
-.sidebar a:hover {
+.navbar-container a:hover {
   background-color: #2a2a30;
   color: #a855f7;
+}
+
+/* Mobile-friendly tweak */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    padding: 12px 10px;
+  }
+
+  .navbar-container a {
+    font-size: 1em;
+    margin: 8px;
+  }
 }
 
 .profile-img {
