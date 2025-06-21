@@ -1,7 +1,7 @@
 const typingElement = document.getElementById("typing-text");
 const phrases = [
-  "AI Developer & Technology Specialist",
-  "Turning Ideas into Reality with Code & AI"
+  "AI Developer & Technology Specialistt",
+  "Turning Ideas into Reality with Code & AII"
 ];
 
 let i = 0;
