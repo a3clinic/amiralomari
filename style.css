@@ -17,34 +17,34 @@ body {
 
 /* Modern top navbar */
 .sidebar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   height: 60px;
-  background: #15151a;
+  background: rgba(21, 21, 26, 0.85);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .sidebar a {
-  color: #ccc;
+  color: #e0e0e0;
   text-decoration: none;
-  margin: 0 20px;
-  transition: color 0.3s;
-  font-size: 1.1em;
+  margin: 0 18px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1.05em;
 }
 
 .sidebar a:hover {
+  background-color: #2a2a30;
   color: #a855f7;
-}
-
-main {
-  margin: 0;
-  padding: 100px 40px 40px;
 }
 
 .profile-img {
