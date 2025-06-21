@@ -33,20 +33,17 @@ nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
 }
 
 .navbar-container a {
   color: #e0e0e0;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 16px;
   padding: 8px 14px;
   border-radius: 10px;
   font-weight: 600;
   font-size: 1.1em;
   transition: all 0.3s ease;
-  white-space: nowrap;
 }
 
 .navbar-container a:hover {
@@ -71,8 +68,10 @@ main {
 h1 {
   font-size: 2.5em;
   margin: 0;
-  text-align: center;
-  white-space: normal;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 h2 {
@@ -176,6 +175,7 @@ h2 {
 
 @media (max-width: 768px) {
   .navbar-container {
+    flex-wrap: wrap;
     padding: 12px 10px;
   }
 
@@ -188,15 +188,17 @@ h2 {
     padding: 120px 20px 20px;
   }
 
-  h1 {
-    font-size: 1.9em;
-    text-align: center;
-    white-space: normal;
-  }
-
   .profile-img {
     width: 120px;
     height: 120px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
   }
 
   h2 {
