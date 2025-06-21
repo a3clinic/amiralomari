@@ -1,6 +1,6 @@
 const typingElement = document.getElementById("typing-text");
 const phrases = [
-  "AI Developer & Technology Specialist",
+  "Coding Developer & Technology Specialist",
   "Turning Ideas into Reality with Code & AI"
 ];
 
