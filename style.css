@@ -239,14 +239,13 @@ h2 {
   }
 }
 
-#typing-text::after {
-  content: "|";
-  animation: blink 0.7s infinite;
-  margin-left: 4px;
+.cursor {
   color: #a855f7;
+  animation: blink 0.7s infinite;
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
