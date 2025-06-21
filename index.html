@@ -42,7 +42,7 @@
     <section id="home" class="fade-in center-content">
       <img src="https://i.ibb.co/vvQDL33Q/cropped-circle-image.png" alt="Profile" class="profile-img"/>
       <h1>Amir Alomari | امــير العُــمري</h1>
-      <h2>AI Developer & Technology Specialist</h2>
+      <h2 id="typing-text"></h2>
       <p class="tagline">Blending AI with technology to create smart, user-first digital solutions.</p>
 
       <div class="certifications">
@@ -73,7 +73,35 @@
       </div>
     </section>
   </main>
+<script>
+  const text = "AI Developer & Technology Specialist";
+  const typingElement = document.getElementById("typing-text");
+  let i = 0;
+  let isDeleting = false;
 
+  function typeLoop() {
+    if (isDeleting) {
+      typingElement.innerHTML = text.substring(0, i--);
+    } else {
+      typingElement.innerHTML = text.substring(0, i++);
+    }
+
+    if (!isDeleting && i === text.length + 1) {
+      isDeleting = true;
+      setTimeout(typeLoop, 1000); // Pause before deleting
+      return;
+    }
+
+    if (isDeleting && i === 0) {
+      isDeleting = false;
+    }
+
+    setTimeout(typeLoop, isDeleting ? 50 : 100);
+  }
+
+  typeLoop();
+</script>
+  
   <script>
     // Smooth scroll fix
     document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
