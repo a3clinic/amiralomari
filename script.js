@@ -38,3 +38,28 @@ function type() {
 }
 
 type();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const shareBtn = document.getElementById("shareBtn");
+
+  if (shareBtn) {
+    shareBtn.addEventListener("click", async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: document.title,
+            text: "Check out this awesome website!",
+            url: window.location.href
+          });
+        } catch (err) {
+          console.error("Sharing failed:", err.message);
+        }
+      } else {
+        // Fallback: copy URL
+        navigator.clipboard.writeText(window.location.href)
+          .then(() => alert("Link copied to clipboard!"))
+          .catch(() => alert("Failed to copy the link."));
+      }
+    });
+  }
+});
