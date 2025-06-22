@@ -408,10 +408,9 @@ h2 {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
   margin-top: 50px;
-  justify-items: center;
 }
 
 .stat-card {
@@ -428,6 +427,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: auto;
 }
 
 .stat-card:hover {
@@ -452,7 +452,6 @@ h2 {
 @media (max-width: 768px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px 40px;
   }
 
   .stat-card {
