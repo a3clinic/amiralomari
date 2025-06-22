@@ -145,10 +145,11 @@ function checkScroll() {
 window.addEventListener('scroll', checkScroll);
 
 // Scroll to top on page load if URL has no hash
+// Scroll to top on page load (forcefully after delay)
 window.addEventListener('load', () => {
-  if (!window.location.hash) {
-    window.scrollTo(0, 0);
-  }
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, 10); // small delay lets browser settle first
 });
 
 // Remove hash from URL after scroll to section
