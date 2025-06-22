@@ -112,30 +112,30 @@ let started = false;
 function animateCounts() {
   counters.forEach(counter => {
     const target = +counter.getAttribute('data-target');
-    const suffix = counter.getAttribute('data-suffix') || "";
+    const suffix = counter.getAttribute('data-suffix') || '';
     let count = 0;
-    const increment = Math.ceil(target / 100);
 
-    const updateCount = () => {
+    const duration = 2000; // Slower: total animation time in ms
+    const steps = 100; // Number of steps
+    const increment = target / steps;
+    const stepTime = duration / steps;
+
+    const interval = setInterval(() => {
       count += increment;
-      if (count < target) {
-        counter.innerText = count;
-        setTimeout(updateCount, 20);
-      } else {
+      if (count >= target) {
         counter.innerText = target + suffix;
+        clearInterval(interval);
+      } else {
+        counter.innerText = Math.floor(count) + suffix;
       }
-    };
-
-    updateCount();
+    }, stepTime);
   });
 }
 
-// Trigger when #stats section is in view
 function checkScroll() {
   const statsSection = document.getElementById('stats');
-  if (!statsSection) return;
-
   const rect = statsSection.getBoundingClientRect();
+
   if (!started && rect.top <= window.innerHeight && rect.bottom >= 0) {
     started = true;
     animateCounts();
@@ -143,4 +143,3 @@ function checkScroll() {
 }
 
 window.addEventListener('scroll', checkScroll);
-window.addEventListener('load', checkScroll); // In case it's already in view
