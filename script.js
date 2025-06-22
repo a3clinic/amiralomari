@@ -144,9 +144,11 @@ function checkScroll() {
 
 window.addEventListener('scroll', checkScroll);
 
-// Force scroll to top on refresh
-window.addEventListener('beforeunload', function () {
-  window.scrollTo(0, 0);
+// Scroll to top on page load if URL has no hash
+window.addEventListener('load', () => {
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
 });
 
 // Remove hash from URL after scroll to section
