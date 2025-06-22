@@ -146,10 +146,11 @@ window.addEventListener('scroll', checkScroll);
 
 // Scroll to top on page load if URL has no hash
 // Scroll to top on page load (forcefully after delay)
+// On page load, force to top and remove any scroll position or hash
+window.history.scrollRestoration = 'manual';
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, 10); // small delay lets browser settle first
+  window.scrollTo(0, 0);
+  history.replaceState("", document.title, window.location.pathname + window.location.search);
 });
 
 // Remove hash from URL after scroll to section
