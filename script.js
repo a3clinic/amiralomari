@@ -105,21 +105,24 @@ function resetInterval() {
 showSlide(currentIndex);
 
 // Count-up animation
+// Count-up animation with suffix support
 const counters = document.querySelectorAll('.count');
 let started = false;
 
 function animateCounts() {
   counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const increment = Math.ceil(target / 100);
+    const target = +counter.getAttribute('data-target');
+    const suffix = counter.getAttribute('data-suffix') || "";
+    let count = 0;
+    const increment = Math.ceil(target / 100);
 
+    const updateCount = () => {
+      count += increment;
       if (count < target) {
-        counter.innerText = count + increment;
+        counter.innerText = count;
         setTimeout(updateCount, 20);
       } else {
-        counter.innerText = target;
+        counter.innerText = target + suffix;
       }
     };
 
@@ -127,11 +130,12 @@ function animateCounts() {
   });
 }
 
-// Trigger when in view
+// Trigger when #stats section is in view
 function checkScroll() {
   const statsSection = document.getElementById('stats');
-  const rect = statsSection.getBoundingClientRect();
+  if (!statsSection) return;
 
+  const rect = statsSection.getBoundingClientRect();
   if (!started && rect.top <= window.innerHeight && rect.bottom >= 0) {
     started = true;
     animateCounts();
@@ -139,3 +143,4 @@ function checkScroll() {
 }
 
 window.addEventListener('scroll', checkScroll);
+window.addEventListener('load', checkScroll); // In case it's already in view
