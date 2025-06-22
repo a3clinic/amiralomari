@@ -399,3 +399,45 @@ h2 {
 .carousel-nav.right {
   right: -40px;
 }
+
+.stats-section {
+  margin: 100px auto;
+  text-align: center;
+  max-width: 1000px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.stat-card {
+  background: radial-gradient(circle at top left, #1f1f25, #151519);
+  border: 2px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.25);
+  border-radius: 16px;
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+}
+
+.stat-card strong {
+  font-size: 2.5em;
+  color: #a855f7;
+  display: block;
+}
+
+.stat-card span {
+  margin-top: 10px;
+  display: block;
+  color: #ccc;
+  font-size: 1.1em;
+  font-weight: 500;
+}
