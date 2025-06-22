@@ -103,3 +103,39 @@ function resetInterval() {
 
 // Start with the first slide
 showSlide(currentIndex);
+
+// Count-up animation
+const counters = document.querySelectorAll('.count');
+let started = false;
+
+function animateCounts() {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = Math.ceil(target / 100);
+
+      if (count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+}
+
+// Trigger when in view
+function checkScroll() {
+  const statsSection = document.getElementById('stats');
+  const rect = statsSection.getBoundingClientRect();
+
+  if (!started && rect.top <= window.innerHeight && rect.bottom >= 0) {
+    started = true;
+    animateCounts();
+  }
+}
+
+window.addEventListener('scroll', checkScroll);
