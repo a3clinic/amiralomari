@@ -143,3 +143,22 @@ function checkScroll() {
 }
 
 window.addEventListener('scroll', checkScroll);
+
+// Force scroll to top on refresh
+window.addEventListener('beforeunload', function () {
+  window.scrollTo(0, 0);
+});
+
+// Remove hash from URL after scroll to section
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+
+      // Remove hash from URL without reload
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+    }
+  });
+});
