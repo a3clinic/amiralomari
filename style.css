@@ -442,19 +442,18 @@ h2 {
 }
 
 .chatbot-embed-container {
-  margin: 40px auto 20px; /* Added bottom margin to separate from next section */
-  border-radius: 12px; /* smaller rounding */
+  margin: 40px auto 20px;
+  border-radius: 12px;
   overflow: hidden;
-  max-width: 900px;
-  height: 700px; /* increased height for better fill */
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+  max-width: 1200px;   /* wider max width */
+  width: 90vw;         /* responsive width: 90% of viewport */
+  height: 600px;       /* fixed height */
+  display: block;
 }
 
 .chatbot-embed-container iframe {
-  width: 100%;
-  height: 100%;
+  width: 100%;         /* fill the container’s width */
+  height: 100%;        /* fill the container’s height */
   border: none;
   display: block;
 }
@@ -462,6 +461,11 @@ h2 {
 /* Responsive for smaller screens */
 @media (max-width: 600px) {
   .chatbot-embed-container {
-    height: 550px; /* adjusted for smaller screens */
+    height: 500px;
+    width: 95vw;       /* slightly wider on small screens */
+  }
+  .chatbot-embed-container iframe {
+    height: 100%;
   }
 }
+
