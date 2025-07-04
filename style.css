@@ -446,23 +446,24 @@ h2 {
   border-radius: 12px;
   overflow: hidden;
   max-width: 900px;
-  height: auto; /* let it shrink to fit */
-  max-height: 700px; /* maximum height limit */
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
+  height: 600px;           /* fixed height for consistent look */
+  max-height: 700px;
+  display: block;          /* changed from flex to block to avoid shrinking */
 }
 
 .chatbot-embed-container iframe {
   width: 100%;
-  min-height: 600px; /* minimum height to avoid it being too small */
+  height: 100%;            /* fill the container fully */
   border: none;
   display: block;
 }
 
 /* Responsive for smaller screens */
 @media (max-width: 600px) {
+  .chatbot-embed-container {
+    height: 500px;         /* smaller fixed height on mobile */
+  }
   .chatbot-embed-container iframe {
-    min-height: 500px;
+    height: 100%;          /* fill the smaller container */
   }
 }
