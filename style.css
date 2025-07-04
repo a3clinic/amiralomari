@@ -444,14 +444,14 @@ h2 {
 /* Chatbot embed container styles */
 .chatbot-embed-container {
   margin-top: 40px;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25); /* purple glow */
+  border-radius: 12px; /* smaller rounding */
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.15); /* lighter shadow */
   overflow: hidden;
-  border: 2px solid #a855f7; /* your purple border */
+  border: 1.5px solid #a855f7; /* thinner border */
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
-  height: 600px; /* fixed height */
+  height: 600px;
 }
 
 .chatbot-embed-container iframe {
@@ -465,7 +465,5 @@ h2 {
 @media (max-width: 600px) {
   .chatbot-embed-container {
     height: 500px;
-  }
-}
   }
 }
