@@ -442,15 +442,14 @@ h2 {
 }
 
 .chatbot-embed-container {
-  margin-top: 40px;
+  margin: 40px auto 20px; /* Added bottom margin to separate from next section */
   border-radius: 12px; /* smaller rounding */
-  /* box-shadow: 0 0 10px rgba(168, 85, 247, 0.15);  remove this */
   overflow: hidden;
-  /* border: 1.5px solid #a855f7;  remove this */
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 600px;
+  height: 700px; /* increased height for better fill */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .chatbot-embed-container iframe {
@@ -463,6 +462,6 @@ h2 {
 /* Responsive for smaller screens */
 @media (max-width: 600px) {
   .chatbot-embed-container {
-    height: 500px;
+    height: 550px; /* adjusted for smaller screens */
   }
 }
