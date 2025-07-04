@@ -440,30 +440,3 @@ h2 {
   font-size: 1.1em;
   font-weight: 500;
 }
-
-/* Chatbot embed container styles */
-.chatbot-embed-container {
-  margin-top: 40px;
-  border-radius: 12px; /* smaller rounding */
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.15); /* lighter shadow */
-  overflow: hidden;
-  border: 1.5px solid #a855f7; /* thinner border */
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 600px;
-}
-
-.chatbot-embed-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-/* Responsive for smaller screens */
-@media (max-width: 600px) {
-  .chatbot-embed-container {
-    height: 500px;
-  }
-}
