@@ -71,12 +71,14 @@ nav.navbar {
     max-width: 100vw !important;
     margin: 0 8px !important;
     padding: 12px 8px !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important; /* Align left, allow scroll */
   }
 
   .navbar-container a {
-    padding: 8px 6px !important;
+    padding: 8px 12px !important;
     font-size: 1em !important;
+    flex: 0 0 auto !important;  /* Fix size, no grow/shrink */
+    margin-right: 8px !important; /* space between buttons */
   }
 }
 
