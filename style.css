@@ -33,11 +33,15 @@ nav.navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Prevent wrapping */
   gap: 10px;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .navbar-container a {
+  flex: 1 1 auto;  /* Allow grow and shrink */
+  min-width: 0;    /* Prevent overflow */
   color: #e0e0e0;
   text-decoration: none;
   padding: 8px 14px;
@@ -46,6 +50,7 @@ nav.navbar {
   font-size: 1.1em;
   transition: all 0.3s ease;
   white-space: nowrap;
+  text-align: center;
 }
 
 .navbar-container a:hover {
