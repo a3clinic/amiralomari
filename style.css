@@ -55,7 +55,12 @@ nav.navbar {
   flex: 1 1 auto !important;
   min-width: 0 !important;
   cursor: pointer !important;
-  display: inline-block !important;
+  display: flex !important;             /* Flex to align content vertically */
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 48px !important;          /* Same min height for all buttons */
+  box-sizing: border-box !important;
+  line-height: 1.2 !important;
 }
 
 .navbar-container a:hover {
@@ -65,7 +70,7 @@ nav.navbar {
   border-color: #a855f7 !important;
 }
 
-/* === NAVBAR FIX ON MOBILE: smaller buttons and allow wrapping for full text === */
+/* === NAVBAR FIX ON MOBILE: smaller buttons, allow wrapping, equal height === */
 @media (max-width: 480px) {
   .navbar-container {
     max-width: 100vw !important;
@@ -76,13 +81,19 @@ nav.navbar {
   }
 
   .navbar-container a {
-    flex: 1 1 0 !important;       /* equal flexible width */
-    padding: 6px 8px !important;  /* smaller padding */
-    font-size: 0.85em !important; /* smaller font */
-    margin: 0 !important;         /* no side margin */
-    overflow: visible !important; /* allow wrapping */
+    flex: 1 1 0 !important;          /* equal flexible width */
+    padding: 6px 8px !important;     /* smaller padding */
+    font-size: 0.85em !important;    /* smaller font */
+    margin: 0 !important;            /* no side margin */
+    overflow: visible !important;    /* allow wrapping */
     text-overflow: clip !important;
-    white-space: normal !important; /* allow wrapping for full text */
+    white-space: normal !important;  /* allow wrapping for full text */
+    min-height: 48px !important;     /* consistent height */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    line-height: 1.2 !important;
   }
 }
 
