@@ -16,7 +16,6 @@ body {
 }
 
 /* Modern top navbar */
-/* Modern top navbar */
 nav.navbar {
   position: sticky;
   top: 0;
@@ -41,22 +40,27 @@ nav.navbar {
 }
 
 .navbar-container a {
-  flex: 1 1 auto;  /* Allow grow and shrink */
-  min-width: 0;    /* Prevent overflow */
-  color: #e0e0e0;
-  text-decoration: none;
+  background-color: #2a2a30; /* button background */
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.3); /* subtle glow */
+  border: 1px solid rgba(168, 85, 247, 0.4);
   padding: 8px 14px;
   border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #e0e0e0;
   font-weight: 600;
   font-size: 1.1em;
-  transition: all 0.3s ease;
-  white-space: nowrap;
   text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .navbar-container a:hover {
-  background-color: #2a2a30;
-  color: #a855f7;
+  background-color: #a855f7; /* brighter on hover */
+  color: #fff;
+  box-shadow: 0 0 16px #a855f7;
+  border-color: #a855f7;
 }
 
 /* === NAVBAR FIX ON MOBILE === */
