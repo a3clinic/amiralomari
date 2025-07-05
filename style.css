@@ -16,6 +16,7 @@ body {
 }
 
 /* Modern top navbar */
+/* Modern top navbar */
 nav.navbar {
   position: sticky;
   top: 0;
@@ -56,6 +57,21 @@ nav.navbar {
 .navbar-container a:hover {
   background-color: #2a2a30;
   color: #a855f7;
+}
+
+/* === NAVBAR FIX ON MOBILE === */
+@media (max-width: 480px) {
+  .navbar-container {
+    max-width: 100vw !important;
+    margin: 0 8px !important;
+    padding: 12px 8px !important;
+    justify-content: space-between !important;
+  }
+
+  .navbar-container a {
+    padding: 8px 6px !important;
+    font-size: 1em !important;
+  }
 }
 
 main {
