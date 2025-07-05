@@ -40,27 +40,29 @@ nav.navbar {
 }
 
 .navbar-container a {
-  background-color: #2a2a30; /* button background */
-  box-shadow: 0 0 8px rgba(168, 85, 247, 0.3); /* subtle glow */
-  border: 1px solid rgba(168, 85, 247, 0.4);
-  padding: 8px 14px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  color: #e0e0e0;
-  font-weight: 600;
-  font-size: 1.1em;
-  text-align: center;
-  white-space: nowrap;
-  text-decoration: none;
-  flex: 1 1 auto;
-  min-width: 0;
+  background-color: #2a2a30 !important; /* dark button background */
+  box-shadow: 0 0 12px 2px rgba(168, 85, 247, 0.7) !important; /* stronger glow */
+  border: 1.5px solid rgba(168, 85, 247, 0.8) !important;
+  padding: 10px 18px !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  color: #e0e0e0 !important;
+  font-weight: 600 !important;
+  font-size: 1.1em !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  cursor: pointer !important;
+  display: inline-block !important;
 }
 
 .navbar-container a:hover {
-  background-color: #a855f7; /* brighter on hover */
-  color: #fff;
-  box-shadow: 0 0 16px #a855f7;
-  border-color: #a855f7;
+  background-color: #a855f7 !important;
+  color: #fff !important;
+  box-shadow: 0 0 20px 4px #a855f7 !important;
+  border-color: #a855f7 !important;
 }
 
 /* === NAVBAR FIX ON MOBILE === */
