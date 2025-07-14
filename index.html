@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,8 +23,10 @@
   </script>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Official website of Amir Alomari — AI Developer & Technology Specialist blending AI with technology to build smart, user-first digital experiences.">
-  <meta name="keywords" content="Amir Alomari, Alomari Amir, amiralomari, Amir Alomari AI, AI Developer Amir, Alomari Developer, AI Portfolio Amir, Amir Alomari Projects, Amir Alomari Technology, Amir Alomari Website, Amir Alomari Kuwait, AI Specialist Amir Alomari, Amir Alomari Coding, Tech Developer Alomari, Alomari AI Websites, Alomari Automation Systems, AI Engineer Amir, Alomari Tech Expert, Amir Alomari Professional, Software Developer Amir Alomari, Full Stack Developer Amir, Alomari AI Programmer, Amir Alomari Digital Solutions, Custom AI Solutions Amir Alomari">
+  <meta name="description"
+    content="Official website of Amir Alomari — AI Developer & Technology Specialist blending AI with technology to build smart, user-first digital experiences.">
+  <meta name="keywords"
+    content="Amir Alomari, Alomari Amir, amiralomari, Amir Alomari AI, AI Developer Amir, Alomari Developer, AI Portfolio Amir, Amir Alomari Projects, Amir Alomari Technology, Amir Alomari Website, Amir Alomari Kuwait, AI Specialist Amir Alomari, Amir Alomari Coding, Tech Developer Alomari, Alomari AI Websites, Alomari Automation Systems, AI Engineer Amir, Alomari Tech Expert, Amir Alomari Professional, Software Developer Amir Alomari, Full Stack Developer Amir, Alomari AI Programmer, Amir Alomari Digital Solutions, Custom AI Solutions Amir Alomari">
   <meta name="author" content="Amir Alomari">
   <meta name="robots" content="index, follow">
 
@@ -44,169 +47,312 @@
   <!-- Favicon -->
   <link rel="icon" href="https://i.ibb.co/vvQDL33Q/cropped-circle-image.png" type="image/png">
 
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  
-<nav class="navbar">
-  <div class="navbar-container">
-    <a href="#home">🏠 Home</a>
-    <a href="#projects">💼 Projects</a>
-    <a href="#contact">📬 Contact</a>
-    <a href="#chatbot">🤖 ChatBot</a>
-  </div>
-</nav>
+
+  <!-- Navigation with improved accessibility -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="navbar-container">
+      <a href="#home" aria-label="Go to home section">
+        <span class="nav-icon" aria-hidden="true">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="#projects" aria-label="Go to projects section">
+        <span class="nav-icon" aria-hidden="true">💼</span>
+        <span>Projects</span>
+      </a>
+      <a href="#contact" aria-label="Go to contact section">
+        <span class="nav-icon" aria-hidden="true">📬</span>
+        <span>Contact</span>
+      </a>
+      <a href="#chatbot" aria-label="Go to chatbot section">
+        <span class="nav-icon" aria-hidden="true">🤖</span>
+        <span>ChatBot</span>
+      </a>
+    </div>
+  </nav>
 
   <main>
-    <section id="home" class="fade-in center-content">
-      <img src="https://i.ibb.co/vvQDL33Q/cropped-circle-image.png" alt="Profile" class="profile-img"/>
-      <h1>Amir Alomari | امــير العُــمري</h1>
-      <h2><span id="typing-text"></span></h2>
-      <p class="tagline">Blending AI with technology to create smart, user-first digital solutions.</p>
+    <!-- Hero Section with enhanced structure -->
+    <section id="home" class="hero-section fade-in center-content">
+      <div class="hero-content">
+        <div class="profile-container">
+          <img src="https://i.ibb.co/vvQDL33Q/cropped-circle-image.png"
+            alt="Amir Alomari - AI Developer & Technology Specialist" class="profile-img" loading="eager" />
+          <div class="profile-glow"></div>
+        </div>
 
-<div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
-  <img src="https://i.ibb.co/s91VkYsK/pin.png" alt="Location Pin" style="height: 24px;">
-  <span style="color: #ccc; font-size: 1.1em;">Jordan</span>
-  <img src="https://i.ibb.co/5WCcyQRw/jordan.png" alt="Jordan Flag" style="height: 30px;">
-  <span style="color: #aaa; font-size: 1.1em;">&</span>
-  <span style="color: #ccc; font-size: 1.1em;">Australia</span>
-  <img src="https://i.ibb.co/4nXVMxmW/australia.png" alt="Australia Flag" style="height: 30px;">
-</div>
+        <header class="hero-text">
+          <h1 class="hero-title">
+            <span class="name-primary">Amir Alomari</span>
+            <span class="name-secondary">امــير العُــمري</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            <span id="typing-text" aria-live="polite"></span>
+          </h2>
+          <p class="tagline">Blending AI with technology to create smart, user-first digital solutions.</p>
+        </header>
 
-   <div class="certifications" style="margin-top: 30px;">
-  <span class="certified" style="font-size: 1.3em; font-weight: 600; color: #ccc;">Certified by</span>
-  <div class="cert-box" style="
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 16px 24px;
-    background-color: rgba(255, 255, 255, 0.07);
-    border: 2px solid #a855f7;
-    border-radius: 16px;
-    margin-top: 12px;
-    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.25);
-  ">
-    <img src="https://i.ibb.co/mVbXJNhG/download-16.png" alt="Meta Certified" class="cert-logo" style="height: 60px;" />
-    <span style="color: #aaa; font-size: 1.4em;">&</span>
-    <img src="https://i.ibb.co/20PXpwNV/Google-logo.png" alt="Google Certified" class="cert-logo" style="height: 38px;" />
-  </div>
-</div>
-    </section>
+        <!-- Location section with improved structure -->
+        <div class="location-info" role="region" aria-label="Location information">
+          <div class="location-item">
+            <img src="https://i.ibb.co/s91VkYsK/pin.png" alt="" class="location-pin" aria-hidden="true">
+            <span class="location-text">Jordan</span>
+            <img src="https://i.ibb.co/5WCcyQRw/jordan.png" alt="Jordan flag" class="flag-icon">
+          </div>
+          <span class="location-separator" aria-hidden="true">&</span>
+          <div class="location-item">
+            <span class="location-text">Australia</span>
+            <img src="https://i.ibb.co/4nXVMxmW/australia.png" alt="Australia flag" class="flag-icon">
+          </div>
+        </div>
 
-    <section id="projects" class="fade-in center-content">
-      <h2>Projects</h2>
-      <div class="gallery">
-        <div class="card">AI Automations for Businesses🤖 </div>
-        <div class="card">20+ Professional Websites Developed 💻 </div>
-        <div class="card">An AI Assistant Like No Other... Coming Soon🚀 </div>
-      </div>
-    </section>
+        <!-- Certifications with improved accessibility -->
+        <div class="certifications" role="region" aria-label="Professional certifications">
+          <p class="certified-text">Certified by</p>
+          <div class="cert-container">
+            <img src="https://i.ibb.co/mVbXJNhG/download-16.png" alt="Meta certification" class="cert-logo meta" />
+            <span class="cert-separator" aria-hidden="true">&</span>
+            <img src="https://i.ibb.co/20PXpwNV/Google-logo.png" alt="Google certification" class="cert-logo" />
+          </div>
+        </div>
 
-<section class="testimonials-container" id="testimonials">
-  <h2>What People Say</h2>
-  <p>92% of collaborators say Amir improved their daily work in just one week</p>
+        <!-- Projects Section with enhanced cards -->
+        <section id="projects" class="projects-section fade-in center-content">
+          <div class="section-container">
+            <header class="section-header">
+              <h2 class="section-title">Featured Projects</h2>
+              <p class="section-subtitle">Innovative solutions powered by AI and modern technology</p>
+            </header>
 
-  <div class="testimonials-carousel">
-    <!-- Slide 1 -->
-    <div class="testimonial-slide active">
-      <p><mark>Amir is the kind of developer you can count on.</mark> Fast communication, no fluff, and solid results. He turned our broken prototype into a working product in days.</p>
-      <div class="testimonial-author">Lina A.</div>
-      <div class="testimonial-position">Startup Founder, Bloomify</div>
-    </div>
+            <div class="projects-grid">
+              <article class="project-card" tabindex="0">
+                <div class="card-icon" aria-hidden="true">🤖</div>
+                <h3 class="card-title">AI Automations for Businesses</h3>
+                <p class="card-description">Streamlining workflows with intelligent automation solutions</p>
+                <div class="card-glow"></div>
+              </article>
 
-    <!-- Slide 2 -->
-    <div class="testimonial-slide">
-      <p><mark>We collaborated on an internal AI dashboard.</mark> Amir just got it. No need for endless back-and-forths — he delivered clean code and great ideas.</p>
-      <div class="testimonial-author">Mustafa H.</div>
-      <div class="testimonial-position">Senior Software Engineer, N/A</div>
-    </div>
+              <article class="project-card" tabindex="0">
+                <div class="card-icon" aria-hidden="true">💻</div>
+                <h3 class="card-title">20+ Professional Websites</h3>
+                <p class="card-description">Modern, responsive web solutions for diverse clients</p>
+                <div class="card-glow"></div>
+              </article>
 
-    <!-- Slide 3 -->
-    <div class="testimonial-slide">
-      <p><mark>Amir helped us automate repetitive tasks.</mark> The time savings have been amazing. Super smart, very professional.</p>
-      <div class="testimonial-author">Aisha M.</div>
-      <div class="testimonial-position">Operations Specialist, WebSprint</div>
-    </div>
+              <article class="project-card" tabindex="0">
+                <div class="card-icon" aria-hidden="true">🚀</div>
+                <h3 class="card-title">AI Assistant Platform</h3>
+                <p class="card-description">Revolutionary AI assistant experience coming soon</p>
+                <div class="card-glow"></div>
+              </article>
+            </div>
+          </div>
+        </section>
 
-    <!-- Slide 4 -->
-    <div class="testimonial-slide">
-      <p><mark>He built a custom chatbot for our site.</mark> Visitors love it, and it saved our support team so much time.</p>
-      <div class="testimonial-author">Salma R.</div>
-      <div class="testimonial-position">Community Manager, CodersBay</div>
-    </div>
+        <!-- Testimonials Section with improved carousel -->
+        <section class="testimonials-section" id="testimonials">
+          <div class="section-container">
+            <header class="section-header">
+              <h2 class="section-title">What People Say</h2>
+              <p class="section-subtitle">92% of collaborators say Amir improved their daily work in just one week</p>
+            </header>
 
-    <!-- Slide 5 -->
-    <div class="testimonial-slide">
-      <p><mark>I had no tech experience, but Amir explained everything clearly.</mark> The website he made for my brand is simple, smart, and beautiful.</p>
-      <div class="testimonial-author">Nour K.</div>
-      <div class="testimonial-position">Freelance Designer, N/A</div>
-    </div>
+            <div class="testimonials-carousel" role="region" aria-label="Client testimonials">
+              <!-- Slide 1 -->
+              <article class="testimonial-slide active" role="tabpanel" aria-label="Testimonial 1 of 5">
+                <blockquote class="testimonial-quote">
+                  <p><mark>Amir is the kind of developer you can count on.</mark> Fast communication, no fluff, and
+                    solid results. He turned our broken prototype into a working product in days.</p>
+                </blockquote>
+                <footer class="testimonial-author">
+                  <cite class="author-name">Lina A.</cite>
+                  <p class="author-position">Startup Founder, Bloomify</p>
+                </footer>
+              </article>
 
-    <!-- Carousel Arrows -->
-   <div class="carousel-controls">
-  <button class="carousel-nav left">❮</button>
+              <!-- Slide 2 -->
+              <article class="testimonial-slide" role="tabpanel" aria-label="Testimonial 2 of 5">
+                <blockquote class="testimonial-quote">
+                  <p><mark>We collaborated on an internal AI dashboard.</mark> Amir just got it. No need for endless
+                    back-and-forths — he delivered clean code and great ideas.</p>
+                </blockquote>
+                <footer class="testimonial-author">
+                  <cite class="author-name">Mustafa H.</cite>
+                  <p class="author-position">Senior Software Engineer</p>
+                </footer>
+              </article>
 
-  <!-- Carousel Dots -->
-  <div class="carousel-dots">
-    <span class="active"></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <button class="carousel-nav right">❯</button>
-</div>
-</section>
+              <!-- Slide 3 -->
+              <article class="testimonial-slide" role="tabpanel" aria-label="Testimonial 3 of 5">
+                <blockquote class="testimonial-quote">
+                  <p><mark>Amir helped us automate repetitive tasks.</mark> The time savings have been amazing. Super
+                    smart, very professional.</p>
+                </blockquote>
+                <footer class="testimonial-author">
+                  <cite class="author-name">Aisha M.</cite>
+                  <p class="author-position">Operations Specialist, WebSprint</p>
+                </footer>
+              </article>
 
-<!-- Chatbot embed with site-consistent styling -->
-<section id="chatbot" class="fade-in center-content" style="margin-top: 60px;">
-  <div class="chatbot-embed-container">
-    <iframe 
-      src="https://a3clinic.github.io/amirai/" 
-      title="Amir's AI Assistant" 
-      allow="microphone"
-      loading="lazy"
-    ></iframe>
-  </div>
-</section>
+              <!-- Slide 4 -->
+              <article class="testimonial-slide" role="tabpanel" aria-label="Testimonial 4 of 5">
+                <blockquote class="testimonial-quote">
+                  <p><mark>He built a custom chatbot for our site.</mark> Visitors love it, and it saved our support
+                    team so much time.</p>
+                </blockquote>
+                <footer class="testimonial-author">
+                  <cite class="author-name">Salma R.</cite>
+                  <p class="author-position">Community Manager, CodersBay</p>
+                </footer>
+              </article>
 
-<section id="stats" class="fade-in stats-section center-content">
-  <h2>Impact in Numbers</h2>
-  <div class="stats-grid">
-    <div class="stat-card">
-      <strong class="count" data-target="20" data-suffix="+">0</strong>
-      <span>Web Projects</span>
-    </div>
-    <div class="stat-card">
-      <strong class="count" data-target="10" data-suffix="+">0</strong>
-      <span>Automation Systems</span>
-    </div>
-    <div class="stat-card">
-      <strong class="count" data-target="92" data-suffix="%">0</strong>
-      <span>Client Satisfaction</span>
-    </div>
-    <div class="stat-card">
-      <strong class="count" data-target="3">0</strong>
-      <span>Years of Experience</span>
-    </div>
-  </div>
-</section>
+              <!-- Slide 5 -->
+              <article class="testimonial-slide" role="tabpanel" aria-label="Testimonial 5 of 5">
+                <blockquote class="testimonial-quote">
+                  <p><mark>I had no tech experience, but Amir explained everything clearly.</mark> The website he made
+                    for my brand is simple, smart, and beautiful.</p>
+                </blockquote>
+                <footer class="testimonial-author">
+                  <cite class="author-name">Nour K.</cite>
+                  <p class="author-position">Freelance Designer</p>
+                </footer>
+              </article>
 
-    <section id="contact" class="fade-in center-content">
-      <h2>Contact Amir Alomari</h2>
-      <div class="socials">
-  
-        <a href="mailto:amirooxstar@gmail.com"><img src="https://i.ibb.co/67z7d7gr/7089163-gmail-google-icon.png" alt="Gmail" class="icon"></a>
-      
-        </a>
-      </div>
-    </section>
+              <!-- Carousel Controls -->
+              <div class="carousel-controls">
+                <button class="carousel-nav left" aria-label="Previous testimonial">
+                  <span aria-hidden="true">❮</span>
+                </button>
+
+                <!-- Carousel Dots -->
+                <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+                  <button class="dot active" role="tab" aria-selected="true" aria-label="Go to testimonial 1"></button>
+                  <button class="dot" role="tab" aria-selected="false" aria-label="Go to testimonial 2"></button>
+                  <button class="dot" role="tab" aria-selected="false" aria-label="Go to testimonial 3"></button>
+                  <button class="dot" role="tab" aria-selected="false" aria-label="Go to testimonial 4"></button>
+                  <button class="dot" role="tab" aria-selected="false" aria-label="Go to testimonial 5"></button>
+                </div>
+
+                <button class="carousel-nav right" aria-label="Next testimonial">
+                  <span aria-hidden="true">❯</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stats Section with enhanced animations -->
+        <section id="stats" class="stats-section fade-in center-content">
+          <div class="section-container">
+            <header class="section-header">
+              <h2 class="section-title">Impact in Numbers</h2>
+              <p class="section-subtitle">Measurable results that speak for themselves</p>
+            </header>
+
+            <div class="stats-grid">
+              <div class="stat-card" tabindex="0">
+                <div class="stat-number">
+                  <strong class="count" data-target="20" data-suffix="+" aria-label="20 plus">0</strong>
+                </div>
+                <p class="stat-label">Web Projects</p>
+                <div class="stat-glow"></div>
+              </div>
+
+              <div class="stat-card" tabindex="0">
+                <div class="stat-number">
+                  <strong class="count" data-target="10" data-suffix="+" aria-label="10 plus">0</strong>
+                </div>
+                <p class="stat-label">Automation Systems</p>
+                <div class="stat-glow"></div>
+              </div>
+
+              <div class="stat-card" tabindex="0">
+                <div class="stat-number">
+                  <strong class="count" data-target="92" data-suffix="%" aria-label="92 percent">0</strong>
+                </div>
+                <p class="stat-label">Client Satisfaction</p>
+                <div class="stat-glow"></div>
+              </div>
+
+              <div class="stat-card" tabindex="0">
+                <div class="stat-number">
+                  <strong class="count" data-target="3" aria-label="3">0</strong>
+                </div>
+                <p class="stat-label">Years of Experience</p>
+                <div class="stat-glow"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chatbot Section with improved embedding -->
+        <section id="chatbot" class="chatbot-section fade-in center-content">
+          <div class="section-container">
+            <header class="section-header">
+              <h2 class="section-title">AI Assistant</h2>
+              <p class="section-subtitle">Experience intelligent conversation powered by advanced AI</p>
+            </header>
+
+            <div class="chatbot-embed-container">
+              <iframe src="https://a3clinic.github.io/amirai/"
+                title="Amir's AI Assistant - Interactive chatbot for questions and assistance" allow="microphone"
+                loading="lazy" role="application" aria-label="AI Assistant chatbot interface">
+              </iframe>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section with enhanced social links -->
+        <section id="contact" class="contact-section fade-in center-content">
+          <div class="section-container">
+            <header class="section-header">
+              <h2 class="section-title">Get In Touch</h2>
+              <p class="section-subtitle">Ready to bring your ideas to life? Let's connect and create something amazing
+                together.</p>
+            </header>
+
+            <div class="contact-content">
+              <div class="contact-info">
+                <p class="contact-text">Available for new projects and collaborations</p>
+                <div class="socials">
+                  <a href="mailto:amirooxstar@gmail.com" class="social-link" aria-label="Send email to Amir Alomari">
+                    <img src="https://i.ibb.co/67z7d7gr/7089163-gmail-google-icon.png" alt="" class="social-icon"
+                      aria-hidden="true">
+                    <span class="social-label">Email</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
   </main>
-<button id="scrollToTopBtn" class="scroll-to-top" title="Back to top">
-  <img src="https://i.ibb.co/JjPBWSNr/arrow-top1.png" alt="Back to Top" />
-</button>
-<script src="script.js"></script>
-</body> 
+
+  <!-- Scroll to top button with improved accessibility -->
+  <button id="scrollToTopBtn" class="scroll-to-top" title="Back to top" aria-label="Scroll back to top of page">
+    <img src="https://i.ibb.co/JjPBWSNr/arrow-top1.png" alt="" aria-hidden="true" />
+  </button>
+
+  <!-- Background elements for visual enhancement -->
+  <div class="bg-elements" aria-hidden="true">
+    <div class="bg-gradient-1"></div>
+    <div class="bg-gradient-2"></div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
