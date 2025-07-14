@@ -191,9 +191,17 @@ class StatsCounter {
 
     this.observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting && !this.hasStarted) {
-          this.hasStarted = true;
+        if (entry.isIntersecting) {
           this.animateCounters();
+        } else {
+          // Reset counters to 0 when section leaves viewport
+          this.counters.forEach(counter => {
+            // Clear any ongoing animation intervals
+            if (counter._animationInterval) {
+              clearInterval(counter._animationInterval);
+            }
+            counter.textContent = '0' + (counter.getAttribute('data-suffix') || '');
+          });
         }
       });
     }, options);
@@ -230,6 +238,7 @@ class StatsCounter {
         element.textContent = Math.floor(current) + suffix;
       }
     }, stepTime);
+    element._animationInterval = timer; // Store the interval ID on the element
   }
 }
 
@@ -557,7 +566,7 @@ const Utils = {
     return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.body.scrollHeight;documentElement.clientHeight) &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
