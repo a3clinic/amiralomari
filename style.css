@@ -571,8 +571,8 @@ main {
 
 /* ===== TESTIMONIALS SECTION ===== */
 .testimonials-section {
-  padding: var(--spacing-3xl) 0;
-  background: transparent;
+  padding: var(--spacing-3xl) 0 !important;
+  background: transparent !important;
 }
 
 .testimonials-carousel {
