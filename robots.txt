@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://a3clinic.github.io/amiralomari/sitemap.xml
