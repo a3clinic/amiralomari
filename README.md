@@ -1,5 +1,3 @@
-
-````markdown
 # Amir Majdi Alomari | AI Developer & Technology Specialist
 
 [![Website](https://img.shields.io/badge/Website-amiralomari.xyz-blue?style=flat-square&logo=googlesites)](https://amiralomari.xyz)
