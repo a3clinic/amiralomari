@@ -56,7 +56,7 @@ The website demonstrates modern web development practices, AI integration, autom
 ## 📂 Repository Structure
 
 ```text
-.
+
 ├── index.html         # Main website
 ├── style.css          # Stylesheet
 ├── script.js          # JS scripts
