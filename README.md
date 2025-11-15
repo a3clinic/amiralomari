@@ -3,7 +3,6 @@
 [![Website](https://img.shields.io/badge/Website-amiralomari.xyz-blue?style=flat-square&logo=googlesites)](https://amiralomari.xyz)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-102848297-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/amir-majdi-alomari-102848297/)
 [![X (Twitter)](https://img.shields.io/badge/X-@amiralomarii-1DA1F2?style=flat-square&logo=twitter)](https://x.com/amiralomarii)
-[![GitHub](https://img.shields.io/badge/GitHub-amiralomari-181717?style=flat-square&logo=github)](https://github.com/amiralomari)
 [![Email](https://img.shields.io/badge/Email-amirooxstar@gmail.com-D14836?style=flat-square&logo=gmail)](mailto:amirooxstar@gmail.com)
 
 ---
